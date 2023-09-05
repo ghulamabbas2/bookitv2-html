@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- RoomDetails Component -->
+    <div class="container container-fluid">
+      <h2 class="mt-5">Lorem Ipsum Room</h2>
+      <p>1234 Lorem Ipsum Street, Lorem City</p>
+
+      <div class="ratings mt-auto mb-3">
+        <!-- StarRatings Component -->
+        <div class="star-ratings">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+          <span class="no-of-reviews">(50 Reviews)</span>
+        </div>
+        <!-- End StarRatings Component -->
+      </div>
+
+      <!-- RoomImageSlider Component -->
+
+      <div style="width: 100%; height: 460px">
+        <img
+          class="d-block m-auto"
+          src="./images/default_room_image.jpg"
+          alt="images/default_room_image.jpg"
+          layout="fill"
+        />
+      </div>
+      <!-- End RoomImageSlider Component -->
+
+      <div class="row my-5">
+        <div class="col-12 col-md-6 col-lg-8">
+          <h3>Description</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            fermentum nulla sit amet eros iaculis, id venenatis purus tempor.
+            Sed bibendum bibendum tellus, sed suscipit elit condimentum nec.
+            Aliquam id venenatis ipsum. Sed vel lorem vitae leo sodales iaculis.
+            Sed vehicula, tellus in ultrices vestibulum, erat quam fermentum
+            tortor, quis feugiat erat dolor in est.
+          </p>
+
+          <!-- RoomFeatures Component -->
+          <div class="features mt-5">
+            <h3 class="mb-4">Features:</h3>
+            <div class="room-feature">
+              <i class="fa fa-cog fa-fw fa-users" aria-hidden="true"></i>
+              <p>4 Guests</p>
+            </div>
+            <div class="room-feature">
+              <i class="fa fa-cog fa-fw fa-bed" aria-hidden="true"></i>
+              <p>2 Beds</p>
+            </div>
+            <div class="room-feature">
+              <i class="fa fa-check text-success" aria-hidden="true"></i>
+              <p>Breakfast</p>
+            </div>
+            <div class="room-feature">
+              <i class="fa fa-check text-success" aria-hidden="true"></i>
+              <p>Internet</p>
+            </div>
+            <div class="room-feature">
+              <i class="fa fa-check text-success" aria-hidden="true"></i>
+              <p>Air Conditioned</p>
+            </div>
+            <div class="room-feature">
+              <i class="fa fa-check text-success" aria-hidden="true"></i>
+              <p>Pets Allowed</p>
+            </div>
+            <div class="room-feature">
+              <i class="fa fa-check text-success" aria-hidden="true"></i>
+              <p>Room Cleaning</p>
+            </div>
+            <!-- Repeat the above room-feature for each feature -->
+          </div>
+          <!-- End RoomFeatures Component -->
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <!-- BookingDatePicker Component -->
+          <div class="booking-card shadow p-4">
+            <p class="price-per-night"><b>$100</b> / night</p>
+            <hr />
+            <p class="mt-5 mb-3">Pick Check In & Check Out Date</p>
+            <!-- Booking Date Picker goes here -->
+            <!-- Booking success/error messages go here -->
+          </div>
+          <!-- End BookingDatePicker Component -->
+
+          <!-- Room Location Map (if available) goes here -->
+        </div>
+      </div>
+
+      <!-- NewReview Component -->
+      <button
+        type="button"
+        class="btn form-btn mt-4 mb-5"
+        data-bs-toggle="modal"
+        data-bs-target="#ratingModal"
+      >
+        Submit Your Review
+      </button>
+      <!-- Review Modal -->
+      <div
+        class="modal fade"
+        id="ratingModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="ratingModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <!-- Review Modal content goes here -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="ratingModalLabel">Submit Review</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <!-- Placeholder for Review Content -->
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                consectetur, mi nec tristique vehicula, elit tellus vulputate
+                ex, nec bibendum libero elit at orci.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn my-3 form-btn w-100"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End NewReview Component -->
+
+      <!-- ListReviews Component -->
+      <div class="reviews w-75 mb-5">
+        <h3>3 Reviews</h3>
+        <hr />
+        <!-- Individual Reviews go here -->
+        <div class="review-card my-3">
+          <!-- Review Content goes here -->
+          <div class="row">
+            <div class="col-3 col-lg-1">
+              <img
+                src="./images/avatar.jpg"
+                alt="John Doe"
+                width="60"
+                height="60"
+                class="rounded-circle"
+              />
+            </div>
+            <div class="col-9 col-lg-11">
+              <div class="star-ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </div>
+              <p class="review_user mt-1">by John Doe</p>
+              <!-- Placeholder for Review Comment -->
+              <p class="review_comment">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                consectetur, mi nec tristique vehicula, elit tellus vulputate
+                ex, nec bibendum libero elit at orci.
+              </p>
+            </div>
+            <hr />
+          </div>
+        </div>
+        <!-- Repeat the above review-card for each review -->
+      </div>
+      <!-- End ListReviews Component -->
+    </div>
+    <!-- End RoomDetails Component -->
+
+    <!-- Footer -->
+    <footer class="py-1 pt-5">
+      <p class="text-center mt-1">Book IT - 2019-2021, All Rights Reserved</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://kit.fontawesome.com/9edb65c86a.js"></script>
+  </body>
+</html>

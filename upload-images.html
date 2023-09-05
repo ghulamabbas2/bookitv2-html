@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Images</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <div class="row wrapper">
+        <div class="col-10 col-lg-7 mt-5 mt-lg-0">
+          <form
+            class="shadow rounded bg-body"
+            action="/submit-product-images"
+            method="POST"
+          >
+            <h2 class="mb-4">Upload Product Images</h2>
+
+            <div class="form-group">
+              <label for="customFile" class="form-label">Choose Images</label>
+
+              <div class="custom-file">
+                <input
+                  type="file"
+                  name="product_images"
+                  class="form-control"
+                  id="customFile"
+                  multiple
+                  required
+                />
+              </div>
+
+              <div class="new-images mt-4">
+                <p class="text-warning">New Images:</p>
+                <div class="row mt-4">
+                  <!-- Example of a single image preview, you can repeat this structure for multiple images -->
+                  <div class="col-md-3 mt-2">
+                    <div class="card">
+                      <img
+                        src="path_to_image.jpg"
+                        alt="Card"
+                        class="card-img-top p-2"
+                        style="width: 100%; height: 80px"
+                      />
+                      <button
+                        style="background-color: #dc3545; border-color: #dc3545"
+                        type="button"
+                        class="btn btn-block btn-danger cross-button mt-1 py-0"
+                      >
+                        <i class="fa fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Repeat this structure for each new image -->
+                </div>
+              </div>
+
+              <div class="uploaded-images mt-4">
+                <p class="text-success">Product Uploaded Images:</p>
+                <div class="row mt-1">
+                  <!-- Example of a single uploaded image, you can repeat this structure for multiple images -->
+                  <div class="col-md-3 mt-2">
+                    <div class="card">
+                      <img
+                        src="path_to_uploaded_image.jpg"
+                        alt="Card"
+                        class="card-img-top p-2"
+                        style="width: 100%; height: 80px"
+                      />
+                      <button
+                        style="background-color: #dc3545; border-color: #dc3545"
+                        class="btn btn-block btn-danger cross-button mt-1 py-0"
+                        disabled
+                      >
+                        <i class="fa fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Repeat this structure for each uploaded image -->
+                </div>
+              </div>
+            </div>
+
+            <button
+              id="register_button"
+              type="submit"
+              class="btn form-btn w-100 py-2"
+            >
+              Upload
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/9edb65c86a.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Reviews</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ps-4 my-5">
+      <div class="d-flex justify-content-start align-items-center">
+        <div class="mb-3 me-4">
+          <label class="form-label d-block">Start Date</label>
+          <input type="date" id="startDate" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label d-block">End Date</label>
+          <input type="date" id="endDate" class="form-control" />
+        </div>
+
+        <button class="btn form-btn ms-4 mt-3 px-5">Fetch</button>
+      </div>
+
+      <!-- Include SalesStats data below -->
+      <div class="row my-5">
+        <div class="col-12 col-lg-6">
+          <div class="card shadow ps-5">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-2">
+                  <i
+                    class="fas fa-dollar-sign fa-4x"
+                    style="color: #dbdee4"
+                  ></i>
+                </div>
+                <div class="col-10">
+                  <p class="card-title">Sales</p>
+                  <p class="h4">
+                    <b>873,343</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+          <div class="card shadow ps-5">
+            <div class="card-body">
+              <div class="row justify-content-between">
+                <div class="col-2">
+                  <i
+                    class="fas fa-file-invoice fa-4x"
+                    style="color: #dbdee4"
+                  ></i>
+                </div>
+                <div class="col-10">
+                  <p class="card-title">Bookings</p>
+                  <p class="h4">
+                    <b>230</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Include SalesStats data above -->
+
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <h4 class="my-5 text-center">Sales History</h4>
+          <!-- Include SalesChart here -->
+        </div>
+
+        <div class="col-12 col-lg-4 text-center">
+          <h4 class="my-5">Top Performing Rooms</h4>
+          <!-- Include TopPerformingChart here -->
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/9edb65c86a.js"></script>
+  </body>
+</html>

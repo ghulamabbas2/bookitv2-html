@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update User</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Update User Form -->
+    <div class="row wrapper">
+      <div class="col-10 col-lg-8">
+        <form
+          class="shadow rounded bg-body"
+          action="/submit-update-user"
+          method="POST"
+        >
+          <h2 class="mb-4">Update User</h2>
+
+          <div class="mb-3">
+            <label for="name_field" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name_field"
+              class="form-control"
+              name="name"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email_field" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email_field"
+              class="form-control"
+              name="email"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="role_field" class="form-label">Role</label>
+            <select id="role_field" class="form-select" name="role" required>
+              <option value="user">user</option>
+              <option value="admin">admin</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn form-btn w-100 mt-4 mb-3">
+            Update
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- End Update User Form -->
+
+    <script src="https://kit.fontawesome.com/9edb65c86a.js"></script>
+  </body>
+</html>
